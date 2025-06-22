@@ -21,7 +21,7 @@ const Home = () => {
           {/* Foreground Content */}
           <div className="relative z-10 w-full px-4 sm:px-6 md:px-10 lg:px-20">
             {/* Link to About */}
-            <FadeInSection delay={15}>
+            <FadeInSection delay={0}>
               <div className="max-w-4xl mx-auto text-center my-16">
                 <h3
                   className="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-wide drop-shadow-md mb-4"
@@ -46,7 +46,7 @@ const Home = () => {
               </div>
             </FadeInSection>
             {/* Link to Services */}
-            <FadeInSection delay={165}>
+            <FadeInSection delay={0}>
               <div className="max-w-4xl mx-auto text-center my-16">
                 <h3
                   className="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-wide drop-shadow-md mb-4"
@@ -60,7 +60,7 @@ const Home = () => {
                 <div className="mt-6">
                   <div className="inline-block rounded-xl transition-all duration-300 hover:backdrop-blur-xs hover:bg-black/5 hover:border hover:border-white/10 hover:shadow-xl px-6 py-2">
                     <a
-                      href="/about"
+                      href="/services"
                       className="font-medium hover:underline transition duration-300"
                       style={{ color: '#2B5F99' }}
                     >
@@ -71,7 +71,7 @@ const Home = () => {
               </div>
             </FadeInSection>
             {/* Link to Contact */}
-            <FadeInSection delay={315}>
+            <FadeInSection delay={0}>
               <div className="max-w-4xl mx-auto text-center my-16">
                 <h3
                   className="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-wide drop-shadow-md mb-4"
@@ -85,7 +85,7 @@ const Home = () => {
                 <div className="mt-6">
                   <div className="inline-block rounded-xl transition-all duration-300 hover:backdrop-blur-xs hover:bg-black/5 hover:border hover:border-white/10 hover:shadow-xl px-6 py-2">
                     <a
-                      href="/about"
+                      href="/contact"
                       className="font-medium hover:underline transition duration-300"
                       style={{ color: '#2B5F99' }}
                     >
@@ -93,6 +93,16 @@ const Home = () => {
                     </a>
                   </div>
                 </div>
+              </div>
+            </FadeInSection>
+            {/* Logo */}
+            <FadeInSection delay={0}>
+              <div className="flex justify-center mt-20">
+                <img
+                  src={logo}
+                  alt="JM Construction Logo"
+                  className="w-20 sm:w-24 md:w-28 lg:w-32 opacity-90"
+                />
               </div>
             </FadeInSection>
           </div>

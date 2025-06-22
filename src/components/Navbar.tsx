@@ -16,6 +16,8 @@ const Navbar = () => {
     setLanguage(!language);
   };
 
+  const { t } = useTranslation();
+
   return (
     <nav className="w-full bg-white shadow-md">
       <div className="max-w-7.25xl mx-auto px-4 sm:px-6 lg:px-6">
@@ -25,11 +27,28 @@ const Navbar = () => {
             <img src={shortLogo} alt="JM Logo" className="h-24 w-auto object-contain" />
           </Link>
           {/* Nav Links */}
-          <div className="hidden md:flex space-x-6 text-sm text-blue-600 font-medium items-center">
-            <Link to="/services" className="hover:text-blue-800 transition">Services</Link>
-            <Link to="/projects" className="hover:text-blue-800 transition">Projects</Link>
-            <Link to="/about" className="hover:text-blue-800 transition">About</Link>
-            <Link to="/contact" className="hover:text-blue-800 transition">Contact</Link>
+          <div className="hidden md:flex space-x-6 text-md text-blue-600 font-medium items-center">
+            <Link
+              to="/about"
+              className="hover:text-blue-800 transition-transform transform hover:scale-110"
+              style={{ color: '#2B5F99' }}
+            >
+              {t('navbar.about')}
+            </Link>
+            <Link
+              to="/services"
+              className="hover:text-blue-800 transition-transform transform hover:scale-110"
+              style={{ color: '#2B5F99' }}
+            >
+              {t('navbar.services')}
+            </Link>
+            <Link
+              to="/contact"
+              className="hover:text-blue-800 transition-transform transform hover:scale-110"
+              style={{ color: '#2B5F99' }}
+            >
+              {t('navbar.contact')}
+            </Link>
             <div onClick={toggleLanguage} className="cursor-pointer hover:text-blue-800 transition flex items-center">
               <img src={language ? mxFlag : usFlag} alt="Language Flag" className="h-5 w-5 rounded-full object-cover"/>
             </div>
