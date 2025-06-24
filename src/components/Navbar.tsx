@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import fullLogo from '../assets/jm-remodeling-custom-framing-logo-final.jpg';
 import shortLogo from '../assets/shortLogo.png';
 import usFlag from '../assets/um.svg';
 import mxFlag from '../assets/mx.svg';
@@ -9,6 +8,8 @@ import mxFlag from '../assets/mx.svg';
 const Navbar = () => {
   const { i18n } = useTranslation();
   const [language, setLanguage] = useState(i18n.language === 'es');
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const toggleLanguage = () => {
     const newLang = language ? 'en' : 'es';
@@ -16,15 +17,39 @@ const Navbar = () => {
     setLanguage(!language);
   };
 
+  useEffect(() => {
+    const controlNavbar = () => {
+      if (typeof window !== 'undefined') {
+        if (window.scrollY > lastScrollY && window.scrollY > 100) {
+          // Scrolling down and past 100px
+          setIsVisible(false);
+        } else {
+          // Scrolling up or at the top
+          setIsVisible(true);
+        }
+        setLastScrollY(window.scrollY);
+      }
+    };
+
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', controlNavbar);
+      return () => {
+        window.removeEventListener('scroll', controlNavbar);
+      };
+    }
+  }, [lastScrollY]);
+
   const { t } = useTranslation();
 
   return (
-    <nav className="w-full bg-white shadow-md">
-      <div className="max-w-7.25xl mx-auto px-4 sm:px-6 lg:px-6">
+    <nav className={`fixed top-0 left-0 right-0 w-full bg-white shadow-md z-50 transition-transform duration-300 ${
+      isVisible ? 'translate-y-0' : '-translate-y-full'
+    }`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <img src={shortLogo} alt="JM Logo" className="h-24 w-auto object-contain" />
+            <img src={shortLogo} alt="JM Remodeling & Custom Framing Logo" className="h-24 w-auto object-contain" />
           </Link>
           {/* Nav Links */}
           <div className="hidden md:flex space-x-6 text-md text-blue-600 font-medium items-center">
