@@ -1,13 +1,6 @@
-import React from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import logo from '../assets/fullLogo.png';
 import backgroundLogo from '../assets/backgroundLogo.png';
 import { useTranslation } from "react-i18next";
-
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { useEffect } from 'react';
 import FadeInSection from '../components/FadeInSection'; 
 
 const Home = () => {

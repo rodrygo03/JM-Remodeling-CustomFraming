@@ -130,7 +130,7 @@ i18n
           },
           home: {
             subheading1: "Artesanía distinguida",
-            content1: "Con más de 20 años de experiencia en construcción residencial, JM Remodelación & Enmarcado Personalizado ofrece experiencia, precisión y un compromiso con la calidad que nos distingue.",
+            content1: "Con más de 20 años de experiencia en construcción residencial, JM Remodeling & Custom Framing ofrece experiencia, precisión y un compromiso con la calidad que nos distingue.",
             link1: "Conozca la Compañía →",
             subheading2: "Versatilidad",
             content2: "Ya sea que sea un propietario reconstruyendo después de un desastre o un contratista en busca de apoyo especializado, ofrecemos una amplia gama de servicios expertos. Desde carpintería y cercas hasta revestimiento, ventanas, porches, techos y más. Aportamos artesanía a cada proyecto.",

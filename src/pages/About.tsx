@@ -1,4 +1,3 @@
-import React from 'react';
 import backgroundImage from '../assets/backgroundLogo.png';
 import companyLogo from '../assets/fullLogo.png';
 import { useTranslation } from "react-i18next";
