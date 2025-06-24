@@ -1,6 +1,7 @@
 import logo from '../assets/fullLogo.png';
 import backgroundLogo from '../assets/backgroundLogo.png';
 import { useTranslation } from "react-i18next";
+import { Link } from 'react-router-dom';
 import FadeInSection from '../components/FadeInSection'; 
 
 const Home = () => {
@@ -27,13 +28,13 @@ const Home = () => {
                 </p>
                 <div className="mt-6">
                   <div className="inline-block rounded-xl transition-all duration-300 hover:backdrop-blur-xs hover:bg-black/5 hover:border hover:border-white/10 hover:shadow-xl px-6 py-2">
-                    <a
-                      href="/about"
+                    <Link
+                      to="/about"
                       className="font-medium hover:underline transition duration-300"
                       style={{ color: '#2B5F99' }}
                     >
                       {t('home.link1')}
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -52,13 +53,13 @@ const Home = () => {
                 </p>
                 <div className="mt-6">
                   <div className="inline-block rounded-xl transition-all duration-300 hover:backdrop-blur-xs hover:bg-black/5 hover:border hover:border-white/10 hover:shadow-xl px-6 py-2">
-                    <a
-                      href="/services"
+                    <Link
+                      to="/services"
                       className="font-medium hover:underline transition duration-300"
                       style={{ color: '#2B5F99' }}
                     >
                       {t('home.link2')}
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -77,13 +78,13 @@ const Home = () => {
                 </p>
                 <div className="mt-6">
                   <div className="inline-block rounded-xl transition-all duration-300 hover:backdrop-blur-xs hover:bg-black/5 hover:border hover:border-white/10 hover:shadow-xl px-6 py-2">
-                    <a
-                      href="/contact"
+                    <Link
+                      to="/contact"
                       className="font-medium hover:underline transition duration-300"
                       style={{ color: '#2B5F99' }}
                     >
                       {t('home.link3')}
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

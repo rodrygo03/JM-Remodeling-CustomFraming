@@ -24,6 +24,7 @@ dist-ssr
 *.sw?
 
 CLAUDE.md
+.claude
 # AI logs
 chat-log/
 claude-log/
